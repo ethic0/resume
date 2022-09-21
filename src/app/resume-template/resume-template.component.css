@@ -1,0 +1,122 @@
+.cv-layout {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 1000px;
+    border-color: #2e5496;
+    border-style: solid;
+    
+}
+
+.cv-header {
+    background-color: #2e5496;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.user-name {
+    /* color: white; */
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+.user-designation .form-control {
+    padding-bottom: 20px;
+    /* color: white; */
+    font-size: 15px;
+}
+.form-control {
+    padding-bottom: 20px;
+    /* color: white; */
+    font-size: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv-body {
+    display: grid;
+    grid-template-columns: 1.25fr 2fr;
+    background-color: white;
+}
+
+.cv-body li {
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    font-size: 16px;
+}
+.cv-body p {
+    text-align: left;
+    padding-bottom: 3px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.cv-body h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.cv-body h2 {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 12px;
+    padding-bottom: 7px;
+}
+
+.cv-body h3 {
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 12px;
+}
+
+
+.personal-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px;
+
+}
+
+.call-icon, 
+.mail-icon, 
+.address-icon, 
+.linkedin-icon  {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.personal-details img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.skills-section,.academic-section,.achievements-section, 
+.objective-section, .experience-section, .certification-section,
+.projects-section, .aboutme-section, .declaration-section p {
+    font-size: 13px;
+    padding: 10px 10px;
+    text-align: left;
+    line-height: 17px;
+}
+
+
+.foot-section {
+    background-color: #2e5496;
+    height: 50px;
+}
