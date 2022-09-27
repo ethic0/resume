@@ -29,14 +29,7 @@
     /* color: white; */
     font-size: 15px;
 }
-.form-control {
-    padding-bottom: 20px;
-    /* color: white; */
-    font-size: 15px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .cv-body {
     display: grid;

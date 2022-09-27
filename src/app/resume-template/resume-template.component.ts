@@ -162,6 +162,7 @@ export class ResumeTemplateComponent implements OnInit {
 
   create(){
     console.log('Clicked');
+    console.log('data: ', this.resumeForm.value);
   }
 
   get links(){
