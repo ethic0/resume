@@ -11,14 +11,23 @@ export class ResumeTemplateComponent implements OnInit {
   constructor(private formBuilder: FormBuilder ) { }
   resumeForm: any;
   experienceForm: any;
+
   ngOnInit(): void {
     this.formInit();
+  }
+  numberOnly(event:any): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+
   }
   formInit(): void{
     this.resumeForm = this.formBuilder.group({
       name:['', [Validators.required]],
       position: ['', [Validators.required]],
-      contact: ['', [Validators.required]],
+      contact: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       email: ['',[Validators.required]],
       address: ['', [Validators.required]],
       links: this.formBuilder.array([]),
