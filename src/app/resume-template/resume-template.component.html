@@ -1,18 +1,24 @@
 <div class="cv-layout">
     <form [formGroup]="resumeForm">
     <div class="cv-header">
+    <div>
+
         <div class="user-name">
-            <!-- Utkarsh Sharma -->
+            
             <input formControlName="name" class="form-control user-name" type="text" placeholder="Your Name" required>
         </div>
         <div class="user-designation">
-            <!-- Manager in Content writing departmant, Quirinussoft Pvt. Ltd. -->
-            <input formControlName="position" class=" form-control user-designation" type="text" placeholder="SomePosition at Some Place">
+            
+            <input formControlName="position" class=" form-control user-designation" type="text" placeholder="Position and workplace">
         </div>
+
+    </div>
+
 
         <div class="cv-body">
             <div class="left-section">
-                <div class="personal-details">
+                <div class="personal-details ">
+                    <h1>Personal details</h1>
                     <div class="call-icon">
                         <img src="../../assets/images/call-icon.png">
                         <input formControlName="contact" (keypress)="numberOnly($event)" maxlength="10" class="form-control" type="text" placeholder="Contact Number">
@@ -67,7 +73,7 @@
                 </div>
                 <div class="academic-section">
                     <h1>Education</h1>
-                    <div  class="edu-form-item" *ngFor="let edu of resumeForm.get('education').controls; let i = index" [formGroup]="edu">
+                    <div  class="edu-form-item" *ngFor="let edu of resumeForm.get('education').controls; let i = index" [formGroup]="edu" class="academic-section-details">
                         <label for="UniversityName">University/College Name: </label>
                         <input formControlName="institution" class="form-control" type="text" name="" id="">
                         <label for="Course">Course: </label>
@@ -81,20 +87,18 @@
                         <label for="From">From: </label>
                         <input formControlName="yearFrom" class="form-control" type="text" name="" id="">
                         <label for="To">To: </label>
-                        <input formControlName="yearTo" class="form-control" type="text" name="" id="">
+                        <input formControlName="yearTo" class="form-control" type="text" name="" id=""><br>
                         <Button class="btn btn-danger" (click)="deleteEducation(i)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
                           </svg></Button>
-                        <div>
-                            
-                        </div>
-                        
+                        <div>                     
+                    </div>                        
                     </div>
                     <button class="btn btn-primary" (click)="addEducation()">Add Education</button>
                 </div>
                 <div class="achievements-section">
                     <h1>Achievements</h1>
-                    <div class="edu-form-item" *ngFor="let achievement of resumeForm.get('achievements').controls; let i = index" [formGroup]="achievement">
+                    <div class="edu-form-item" *ngFor="let achievement of resumeForm.get('achievements').controls; let i = index" [formGroup]="achievement" class="achievements-section-details">
                         <label for=" Title"> Title: </label>
                         <input formControlName="title" class="form-control" type="text" name="" id="">
                         <label for="Year">Year: </label>
@@ -113,11 +117,11 @@
             <div class="right-section">
                 <div class="objective-section">
                     <h1>Objective</h1>
-                    <textarea class="form-control"  name="objective" id="" cols="95" rows="5"  placeholder="By giving this information I intend to attain a position, which would empower me to pursue the actions that would affect our community. I by applying my academic and managerial acumen would contribute to the organization to the best of my ability and work hard with utmost sincerity and honesty."></textarea>
+                    <textarea class="form-control"  name="objective" id="" cols="95" rows="5"  placeholder="By giving this information I ...."></textarea>
                 </div>
                 <div class="experience-section">
                     <h1>Experience</h1>
-                    <div class="edu-form-item" *ngFor="let experience of resumeForm.get('experiences').controls; let i = index" [formGroup]="experience">
+                    <div class="edu-form-item" *ngFor="let experience of resumeForm.get('experiences').controls; let i = index" [formGroup]="experience" class="experience-section-details">
                         <label for="Title">Title: </label>
                         <input formControlName="title" class="form-control" type="text" name="" id="">
                         <label for="From">From: </label>
@@ -126,9 +130,12 @@
                         <input formControlName="to" class="form-control" type="text" name="" id="">
                         <label for="Organization">Organization: </label>
                         <input formControlName="organization" class="form-control" type="text" name="" id="">
-                        <label for="Responsibilities">Responsibilities: </label>
-                        <textarea class="form-control"  name="objective" id="" cols="95" rows="5" formControlName="responsibilites" ></textarea>
-                        <div>
+                        
+                        <div class="testing">
+                            <label for="Responsibilities">Responsibilities: </label>
+                            <textarea class="form-control"  name="objective" id="" cols="95" rows="5" formControlName="responsibilites" ></textarea>
+                        </div>   
+                        <div> 
                             <button class="btn btn-danger" (click)="deleteExperiences(i)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
                           </svg></button>
@@ -138,7 +145,7 @@
                 </div>
                 <div class="certification-section">
                     <h1>Training and Certification</h1>
-                    <div class="edu-form-item" *ngFor="let training of resumeForm.get('trainings').controls; let i = index" [formGroup]="training">
+                    <div class="edu-form-item" *ngFor="let training of resumeForm.get('trainings').controls; let i = index" [formGroup]="training" class="certification-section-details">
                         <label for="Title">Title: </label>
                         <input formControlName="title" class="form-control" type="text" name="" id="">
                         <label for="Organization">Organization: </label>
@@ -159,12 +166,14 @@
                 </div>
                 <div class="projects-section">
                     <h1>Projects</h1>
-                    <div class="edu-form-item" *ngFor="let project of resumeForm.get('projects').controls; let i = index" [formGroup]="project">
+                    <div class="edu-form-item" *ngFor="let project of resumeForm.get('projects').controls; let i = index" [formGroup]="project" class="projects-section-details">
                         <label for="Title">Title: </label>
                         <input formControlName="title" class="form-control" type="text" name="" id="">
                         <br>
+                        <div class="testing">
                         <label for="Description">Description:</label> 
                         <textarea class="form-control"  name="description" id="" cols="95" rows="5"formControlName="description"></textarea>
+                        </div>
                         <div>
                             <button class="btn btn-danger" (click)="deleteProject(i)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
@@ -176,7 +185,7 @@
                 </div>
                 <div class="aboutme-section">
                     <h1>About Me</h1>
-                    <textarea class="form-control"  name="about" id="" cols="95" rows="7" placeholder="Apart from the above-mentioned skills, I would like to mention the following traits of my personality. I am a good team worker and a capable team leader. I have contributed as both, a volunteer and a team leader during my 5+ years of career. I have the zeal to do any job responsibility assigned to me with perfection. I putthe best of my effortsto make the job responsibility assigned to me a success"></textarea>
+                    <textarea class="form-control"  name="about" id="" cols="95" rows="7" placeholder="Discribe yourself in words"></textarea>
                 </div>
                 <div class="declaration-section">
                     <h1>Declaration</h1>
