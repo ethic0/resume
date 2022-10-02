@@ -1,0 +1,191 @@
+.cv-layout {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 1024px;
+    border-color: #2e5496;
+    border-style: solid;
+    
+}
+
+.cv-header {
+    background-color: #2e5496;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.profile-picture img {
+    width: 200px;
+    float: left;
+    position: relative;
+}
+
+
+.user-name {
+    color: white;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.user-name  {
+    padding-top: 0px;
+}
+
+
+.user-designation {
+    color: white;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.cv-body {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-auto-flow:row;
+    background-color: white;
+}
+
+.cv-body li {
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    font-size: 16px;
+}
+.cv-body p {
+    text-align: left;
+    padding-bottom: 3px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.cv-body h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: #2e5496;
+}
+
+.cv-body h2 {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 12px;
+    padding-bottom: 7px;
+    color: #3a67b6;
+}
+
+.cv-body h3 {
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 12px;
+}
+
+
+.personal-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px;
+
+}
+
+.call-icon, 
+.mail-icon, 
+.address-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.web-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    max-width: 600px;
+}
+
+.web-name {
+    width: 23%;
+    margin-right: 10px;
+}
+
+.web-link{
+    width: 46%;
+    margin-right: 10px;
+}
+
+.personal-details img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+.skills-section,.academic-section,.achievements-section, 
+.objective-section, .experience-section, .certification-section,
+.projects-section, .aboutme-section, .declaration-section p {
+    font-size: 13px;
+    padding: 10px 10px;
+    text-align: left;
+    line-height: 17px;
+}
+
+.foot-section {
+    background-color: #2e5496;
+    height: 100px;
+}
+
+.foot-section  {
+    /* margin: 40px; */
+    flex-direction: row;
+}
+
+.academic-section-details  {
+    width: 60%;
+    margin-bottom: 10px;
+    margin-left: 5%; 
+}
+
+.experience-section-details  {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5%; 
+}
+
+.certification-section-details  {
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: 5%; 
+}
+
+.projects-section-details  {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 5%; 
+}
+
+.linedin-icon svg {
+    margin-right: 10px;
+}

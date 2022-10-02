@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormArray, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resume-template',
@@ -8,10 +9,10 @@ import { Form, FormArray, FormBuilder, Validators } from '@angular/forms';
 })
 export class ResumeTemplateComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder ) { }
+  constructor(private formBuilder: FormBuilder, private router: Router ) { }
   resumeForm: any;
   experienceForm: any;
-
+  isSubmit = false;
   ngOnInit(): void {
     this.formInit();
   }
@@ -171,7 +172,14 @@ export class ResumeTemplateComponent implements OnInit {
 
   create(){
     console.log('Clicked');
-    console.log('data: ', this.resumeForm.value);
+    this.isSubmit = true;
+    if(this.resumeForm.valid){
+      console.log('data: ', this.resumeForm.value);
+      const formData = this.resumeForm.value;
+      localStorage.setItem('data',JSON.stringify(formData));;
+      this.router.navigateByUrl('/resume');
+    }
+    
   }
 
   get links(){

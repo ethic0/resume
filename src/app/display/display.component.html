@@ -1,1 +1,112 @@
-<p>display works!</p>
+<div class="cv-layout">
+    <div class="cv-header">
+    <div>
+        <div class="user-name">   
+            {{data[0].name}} 
+        </div>
+        <div class="user-designation">
+            {{data[0].position}}
+        </div>
+
+    </div>
+
+
+        <div class="cv-body">
+            <div class="left-section">
+                <div class="personal-details ">
+                    <h1>Personal details</h1>
+                    <div class="call-icon">
+                        <img src="../../assets/images/call-icon.png">
+                        {{data[0].contact}}
+                    </div>
+                    <div class="mail-icon">
+                        <img src="../../assets/images/Mail-icon.svg">
+                        {{data[0].email}}
+                    </div>
+                    <div class="address-icon">
+                        <img src="../../assets/images/address-icon.png">
+                        {{data[0].address}}
+                    </div>
+                    <div >
+                        <div class="web-icon" *ngFor="let web of data[0].links; let i = index">
+                            <div>
+                                <img src="../../assets/images/world-wide-web.png">
+                               <a href="{{web.value}}" target="_blank">{{web.title}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h1>SKILLS</h1>
+                    <h2>Mangement skills</h2>
+                    <div class="form-item" *ngFor="let managment of data[0].managementSkills; let i= index">
+                        <li>{{managment.mgnttSkill}}</li>
+                    </div>
+                    <h2>Technical skills</h2>
+                    <div class="form-item" *ngFor="let technical of data[0].technicalSkills; let i = index">
+                        <li>{{technical.techSkill}}</li>
+                    </div>
+                    
+                </div>
+                <div class="academic-section">
+                    <h1>Education</h1>
+                    <div class="academic-section-details" *ngFor="let edu of data[0].education; let i = index" >
+                        <strong>{{edu.degree}} ({{edu.specialization}}) - {{edu.marks}}% <br> {{edu.institution}}/{{edu.board}} {{edu.yearFrom}} - {{edu.yearTo}}</strong>
+                    </div>                          
+                </div>
+                <div class="achievements-section">
+                    <h1>Achievements</h1>
+                    <div class="achievements-section-details edu-form-item"  *ngFor="let achievement of data[0].achievements; let i = index">
+                        <li>{{achievement.title}} <br> {{achievement.from}} - {{achievement.year}}</li>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="objective-section">
+                    <h1>Objective</h1>
+                    <p>{{data[0].objective}}</p>
+                </div>
+                <div class="experience-section">
+                    <h1>Experience</h1>
+                    <div class="experience-section-details" *ngFor="let experience of data[0].experiences; let i = index">
+                        <div class="testing">
+                          <strong>{{experience.title}} ({{experience.from}}-{{experience.to}})</strong> 
+                          <strong>{{experience.organization}}</strong>
+                          <li>{{experience.responsibilites}}</li>
+                        </div>   
+                    </div>
+                </div>
+                <div class="certification-section">
+                    <h1>Training and Certification</h1>
+                    <div class="certification-section-details" *ngFor="let training of data[0].trainings; let i = index">
+                        <li>{{training.position}} at {{training.organization}} as {{training.title}}</li>
+                    </div>
+                    
+                </div>
+                <div class="projects-section">
+                    <h1>Projects</h1>
+                    <div class="projects-section-details" *ngFor="let project of data[0].projects; let i = index">
+                    <li>{{project.title}} <br>{{project.description}}</li>
+                    </div>
+                    </div>
+                </div>
+                <div class="aboutme-section">
+                    <h1>About Me</h1>
+                    <p>{{data[0].about}}</p>
+                </div>
+                <div class="declaration-section">
+                    <h1>Declaration</h1>
+                    <p>I hereby declare that the above-mentioned information is genuine and I bear the
+                        responsibility for the authenticity of the above-mentioned particulars.</p>
+                    <p><b></b></p>
+                    <strong>{{data[0].name}}</strong>
+                </div>
+            </div>
+        </div>
+        <div class="foot-section">
+
+        </div>
+    </div>
+
+    
