@@ -6,6 +6,7 @@
     max-width: 1024px;
     border-color: #2e5496;
     border-style: solid;
+    border-width: 6px;
     
 }
 
@@ -17,27 +18,15 @@
     text-align: center;
 }
 
-
-.profile-picture img {
-    width: 200px;
-    float: left;
-    position: relative;
-}
-
-
 .user-name {
     color: white;
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-bottom: 10px;
     font-size: 40px;
     text-align: center;
-}
-
-.user-name  {
-    padding-top: 0px;
 }
 
 
@@ -47,8 +36,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 
@@ -57,24 +47,43 @@
     grid-template-columns: 40% 1fr;
     grid-auto-flow:row;
     background-color: white;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    line-height: 1.6;
+}
+.left-section {
+    padding-right: 2.5%;
 }
 
-.cv-body li {
-    text-align: left;
-    padding-left: 15px;
-    padding-bottom: 3px;
-    font-size: 16px;
+.right-section {
+    padding-left: 2.5%;
 }
-.cv-body p {
+
+
+
+.cv-body li {
+    color: #2e5496;
+    font-size: 20px;
+}
+
+.cv-body span {
     text-align: left;
-    padding-bottom: 3px;
-    line-height: 20px;
+    line-height: 1.6;
+    padding-bottom: 5px;
     font-size: 16px;
+    color: black;
+}
+
+.cv-body p {
+    padding-bottom: 3px;
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 
 .cv-body h1 {
-    font-size: 20px;
+    display: block;
+    font-size: 21px;
     font-weight: bold;
     text-align: center;
     padding-bottom: 10px;
@@ -84,29 +93,46 @@
 }
 
 .cv-body h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bolder;
     text-align: left;
-    padding-left: 12px;
-    padding-bottom: 7px;
+    padding-top: 10px;
     color: #3a67b6;
 }
 
 .cv-body h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bolder;
     text-align: left;
     padding-bottom: 5px;
-    padding-left: 12px;
+    color: #3a67b6
+    /* padding-left: 12px; */
 }
+
+
 
 
 .personal-details {
     display: flex;
     flex-direction: column;
-    padding: 10px 25px;
-
+    /* padding-left: 25px; */
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
+
+.personal-details img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.personal-details p {
+    padding-left: 20px;
+    line-height: 1.6;
+    margin-right: 10px;
+    text-align: left;
+}
+
 
 .call-icon, 
 .mail-icon, 
@@ -114,8 +140,7 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-bottom: 10px;
-    width: 300px;
+    width: 1fr;
 }
 
 .web-icon {
@@ -135,21 +160,16 @@
     margin-right: 10px;
 }
 
-.personal-details img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
+
 
 
 .skills-section,.academic-section,.achievements-section, 
 .objective-section, .experience-section, .certification-section,
 .projects-section, .aboutme-section, .declaration-section p {
-    font-size: 13px;
-    padding: 10px 10px;
-    text-align: left;
-    line-height: 17px;
+    padding-bottom: 0px;
+    line-height: 1.6;
+    text-align: justify;
+    
 }
 
 .foot-section {
@@ -160,32 +180,4 @@
 .foot-section  {
     /* margin: 40px; */
     flex-direction: row;
-}
-
-.academic-section-details  {
-    width: 60%;
-    margin-bottom: 10px;
-    margin-left: 5%; 
-}
-
-.experience-section-details  {
-    width: 100%;
-    margin-bottom: 10px;
-    margin-left: 5%; 
-}
-
-.certification-section-details  {
-    width: 90%;
-    margin-bottom: 10px;
-    margin-left: 5%; 
-}
-
-.projects-section-details  {
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-left: 5%; 
-}
-
-.linedin-icon svg {
-    margin-right: 10px;
 }
