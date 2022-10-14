@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DisplayComponent } from './display/display.component';
-import { ResumeTemplateComponent } from './resume-template/resume-template.component';
 
 const routes: Routes = [
-  {path:'', component:ResumeTemplateComponent},
-  {path:'resume', component: DisplayComponent}
+  {
+    path:'',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:'template',
+    loadChildren: () => import('./template/template.module').then(m => m.TemplateModule)
+  },
+  {
+    path:'resume',
+    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule)
+  }
 ];
 
 @NgModule({

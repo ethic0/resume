@@ -1,0 +1,180 @@
+.bodyDes{
+    background-color: #2d5395;
+    height: 100vh;
+}
+.nevigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.header-logo img {
+    width: 200px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu {
+    align-self: center;
+}
+
+.menu li {
+    display:inline;
+    vertical-align: middle;
+    padding: 10px 20px;
+    margin: 0px 10px;
+    font-weight: 600;
+    color: #2d5395;
+
+}
+
+.menu li:hover {
+    background-color: #2d5395;
+    color: white;
+}
+
+.menu a {
+    cursor: pointer;
+}
+
+
+.login {
+    align-self: center;
+    padding-right: 100px;
+}
+
+
+.login button {
+    padding: 10px 20px;
+    border-width: 4px;
+    border-radius: 8px;
+    border: solid;
+    border-color: #2d5395;
+    background-color: white;
+}
+.login button:hover {
+    background-color: #2d5395;
+    color: white;
+    border-color: white;
+}
+
+.center-block {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: flex;
+    margin-top: 15%;
+    border-radius: 50px;
+
+
+}
+
+
+
+.service-sections {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-right: solid;
+    border-color: #2d5395;
+    border-width: 25px;
+    
+}
+
+.service-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.service-icon img {
+    width: 100px;
+    padding-top: 20px;
+
+}
+
+
+
+.service-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 9px;
+    margin-left: 13px;
+
+}
+
+
+
+
+.service-button button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #2d5395;
+    color: #2d5395;
+    font-weight: 600;
+    background-color: white;
+}
+
+.service-button button:hover {
+    background-color: #2d5395;
+    border-color: #2d5395;
+    color: white;
+    transition: .5s;
+}
+
+
+
+.registration-section {
+    text-align: center;
+    width: 50%; 
+    align-self: center;
+}
+.registration-section h2 {
+    color: #2d5395;
+}
+
+
+
+.registration-section div {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-around;
+    align-self: center;
+    color: #2d5395;
+    font-weight: 800;
+}
+
+
+.registration-section input {
+    float: right;
+    padding: 5px;
+    color: #2d5395;
+}
+
+.registration-section button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #2d5395;
+    color: #2d5395;
+    font-weight: 600;
+    background-color: white;  
+}
+
+.registration-section button:hover {
+    background-color: #2d5395;
+    border-color: #2d5395;
+    color: white;
+    transition: .5s;
+}
